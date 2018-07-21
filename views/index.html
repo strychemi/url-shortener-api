@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>URL Shortener</title>
+    <meta name="URL Shortener" content="A cool thing made with Glitch">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--   Bootstrap v4   -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--   Our custom css   -->
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>URL Shortener</h1>
+      <p>A simple app that shortens urls.</p>
+      <p>Satisfies the following user stories:</p>
+      <ul>
+        <li>I can pass a URL as a parameter and I will receive a shortened URL in the JSON response.</li>
+        <li>If I pass an invalid URL that doesn't follow the valid http://www.example.com format, the JSON response will contain an error instead.</li>
+        <li>When I visit that shortened URL, it will redirect me to my original link.</li>
+      </ul>
+      <h3>Example Usage:</h3>
+      <code>https://ls.glitch.me/new/https://www.google.com</code>
+      <br>
+      <p>Results in the following response as JSON:</p>
+      <pre>
+        { 
+          "original":"https://www.google.com/",
+          "short":"https://ls.glitch.me/As3uopgh1KWAkMYw"
+        }
+      </pre>
+      <p>OR</p>
+      <code>https://ls.glitch.me/As3uopgh1KWAkMYw</code>
+      <p>will redirect to https://www.google.com</p>
+    </div>
+    
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <!--   Our custom JS   -->
+    <script src="/client.js"></script>
+
+  </body>
+</html>
